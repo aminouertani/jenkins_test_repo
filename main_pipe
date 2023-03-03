@@ -1,0 +1,27 @@
+pipeline {
+    /* insert Declarative Pipeline here */
+    agent any /* by default it runs on localhost */
+    stages {
+        stage ('first stage running !') {
+            steps {
+                echo "Hello from the first stage, first step !"
+                echo "Second step in first stage !"
+            }
+        }
+        
+        stage ('Second stage is running now !') {
+            steps {
+                echo "Hello from the SEC stage, first step !"
+                echo "Second step in SEC stage !"
+            }
+        }
+
+        stage ('3rd stage is running now SCM !') {
+            steps {
+                echo "Hello fromSCM"
+
+            }
+        }
+    }
+}
+
